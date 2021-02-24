@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* coffeeReviewAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* coffeeReviewAppTests.m */; };
+		039CA88853FC46C68BEE2E08 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A35B01CB53534B539C53A245 /* Roboto-BlackItalic.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -15,7 +16,28 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* coffeeReviewAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* coffeeReviewAppTests.m */; };
+		2ECD3F8A55814EF3AF5B3B01 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7557B9C08A4344618A47261A /* Roboto-ThinItalic.ttf */; };
+		3C200B7529DE47D19375C05B /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CBBFA574D334AE389817ADD /* Roboto-MediumItalic.ttf */; };
+		40C5724272C944B6B7C38C66 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8ADB84CF178D413D8C935531 /* Roboto-Bold.ttf */; };
+		49BF8281A8ED45DBA9421734 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB6F3EDC80AD4299B9DF832E /* Roboto-Medium.ttf */; };
+		4D654066F62F4313ACA672B7 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C723C83F1F4F46CAB0B56BE7 /* Roboto-BoldItalic.ttf */; };
+		50068FF8A57B4359A40C1AA2 /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C871BCE59D3E46D9877FB235 /* RobotoCondensed-LightItalic.ttf */; };
+		6976372D67924E1995523579 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1B975F547FD4CE9A4A59881 /* RobotoCondensed-Italic.ttf */; };
+		6FD54AB930304AA4B6ADBDE7 /* RobotoCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EA6E96976D2437A81B80923 /* RobotoCondensed-BoldItalic.ttf */; };
+		6FED79CFA7464C31B562797E /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4058444E68C444598D1E34B5 /* Roboto-LightItalic.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8D96A4C2459366B2B56B9C54 /* libPods-coffeeReviewApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 309B1E96665C1B14DF4F1179 /* libPods-coffeeReviewApp-tvOSTests.a */; };
+		9C5DFFE9273149E9BDBE955C /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCAE01B5C0E04D539623430C /* Roboto-Thin.ttf */; };
+		A8F976AD3A314634A9A42800 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D28362DDB29E4BB1AEB00E5F /* Roboto-Light.ttf */; };
+		B0A45B64C3F44428A5536A23 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A01C6CE8503414CB09342CE /* Roboto-Italic.ttf */; };
+		B98AAEFADF494EA596CDD6F2 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D38FDBCF1D934F078B00DC73 /* RobotoCondensed-Regular.ttf */; };
+		C035A200BB57B0ADD74FEFDC /* libPods-coffeeReviewApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C227452FCC1FFF476FD800 /* libPods-coffeeReviewApp.a */; };
+		C3E0AE6C51434591B3BE075D /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA24901942B74A598CF68394 /* Roboto-Black.ttf */; };
+		D2B3A3A751E24130BFC530CD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 966A6E2093A148639660C923 /* Roboto-Regular.ttf */; };
+		DA61E8ECABE136A683EA9C5A /* libPods-coffeeReviewApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 268E443AC21E0E448ED91C1E /* libPods-coffeeReviewApp-tvOS.a */; };
+		DD9E7BA694CF438B979AA766 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26FB52359F924373A2570C8A /* RobotoCondensed-Light.ttf */; };
+		E6FE236602454729A13B5DC6 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75ABC4E03C2A4AEDBEC85969 /* RobotoCondensed-Bold.ttf */; };
+		EDD746F8712571395063A9F7 /* libPods-coffeeReviewApp-coffeeReviewAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2F409AC13B7548E691C87F /* libPods-coffeeReviewApp-coffeeReviewAppTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +68,39 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = coffeeReviewApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = coffeeReviewApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = coffeeReviewApp/main.m; sourceTree = "<group>"; };
+		153006251DD5F1A913039E63 /* Pods-coffeeReviewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coffeeReviewApp.debug.xcconfig"; path = "Target Support Files/Pods-coffeeReviewApp/Pods-coffeeReviewApp.debug.xcconfig"; sourceTree = "<group>"; };
+		2515F191747722A99CC30523 /* Pods-coffeeReviewApp-coffeeReviewAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coffeeReviewApp-coffeeReviewAppTests.release.xcconfig"; path = "Target Support Files/Pods-coffeeReviewApp-coffeeReviewAppTests/Pods-coffeeReviewApp-coffeeReviewAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		268E443AC21E0E448ED91C1E /* libPods-coffeeReviewApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coffeeReviewApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26FB52359F924373A2570C8A /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Light.ttf"; path = "../assets/fonts/RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
+		2C2F409AC13B7548E691C87F /* libPods-coffeeReviewApp-coffeeReviewAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coffeeReviewApp-coffeeReviewAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* coffeeReviewApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "coffeeReviewApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* coffeeReviewApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "coffeeReviewApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA6E96976D2437A81B80923 /* RobotoCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-BoldItalic.ttf"; path = "../assets/fonts/RobotoCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		309B1E96665C1B14DF4F1179 /* libPods-coffeeReviewApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coffeeReviewApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A01C6CE8503414CB09342CE /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../assets/fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		4058444E68C444598D1E34B5 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-LightItalic.ttf"; path = "../assets/fonts/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		7557B9C08A4344618A47261A /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-ThinItalic.ttf"; path = "../assets/fonts/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		75ABC4E03C2A4AEDBEC85969 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Bold.ttf"; path = "../assets/fonts/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		76C227452FCC1FFF476FD800 /* libPods-coffeeReviewApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coffeeReviewApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C029D42088220BB5B8C5E0D /* Pods-coffeeReviewApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coffeeReviewApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-coffeeReviewApp-tvOSTests/Pods-coffeeReviewApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7CBBFA574D334AE389817ADD /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-MediumItalic.ttf"; path = "../assets/fonts/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = coffeeReviewApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8ADB84CF178D413D8C935531 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		966A6E2093A148639660C923 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		A1B975F547FD4CE9A4A59881 /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Italic.ttf"; path = "../assets/fonts/RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		A35B01CB53534B539C53A245 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BlackItalic.ttf"; path = "../assets/fonts/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		A779852B8305023FCAD202FE /* Pods-coffeeReviewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coffeeReviewApp.release.xcconfig"; path = "Target Support Files/Pods-coffeeReviewApp/Pods-coffeeReviewApp.release.xcconfig"; sourceTree = "<group>"; };
+		AA24901942B74A598CF68394 /* Roboto-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Black.ttf"; path = "../assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		AB6F3EDC80AD4299B9DF832E /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		AD4F0C03B7E2766AA27025B2 /* Pods-coffeeReviewApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coffeeReviewApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-coffeeReviewApp-tvOS/Pods-coffeeReviewApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		B8D8DBC67E7DAB37E2D5F6A4 /* Pods-coffeeReviewApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coffeeReviewApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-coffeeReviewApp-tvOS/Pods-coffeeReviewApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BCAE01B5C0E04D539623430C /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../assets/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		C723C83F1F4F46CAB0B56BE7 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BoldItalic.ttf"; path = "../assets/fonts/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C871BCE59D3E46D9877FB235 /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-LightItalic.ttf"; path = "../assets/fonts/RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		D28362DDB29E4BB1AEB00E5F /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		D38FDBCF1D934F078B00DC73 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Regular.ttf"; path = "../assets/fonts/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		DB3B7EE76D2CBA8B3F8ABE1A /* Pods-coffeeReviewApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coffeeReviewApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-coffeeReviewApp-tvOSTests/Pods-coffeeReviewApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC1E799978603CDE145F78EA /* Pods-coffeeReviewApp-coffeeReviewAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coffeeReviewApp-coffeeReviewAppTests.debug.xcconfig"; path = "Target Support Files/Pods-coffeeReviewApp-coffeeReviewAppTests/Pods-coffeeReviewApp-coffeeReviewAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -58,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD746F8712571395063A9F7 /* libPods-coffeeReviewApp-coffeeReviewAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C035A200BB57B0ADD74FEFDC /* libPods-coffeeReviewApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA61E8ECABE136A683EA9C5A /* libPods-coffeeReviewApp-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D96A4C2459366B2B56B9C54 /* libPods-coffeeReviewApp-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,11 +172,31 @@
 			name = coffeeReviewApp;
 			sourceTree = "<group>";
 		};
+		1D4A2E9F08BC04E59D9B730B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				153006251DD5F1A913039E63 /* Pods-coffeeReviewApp.debug.xcconfig */,
+				A779852B8305023FCAD202FE /* Pods-coffeeReviewApp.release.xcconfig */,
+				EC1E799978603CDE145F78EA /* Pods-coffeeReviewApp-coffeeReviewAppTests.debug.xcconfig */,
+				2515F191747722A99CC30523 /* Pods-coffeeReviewApp-coffeeReviewAppTests.release.xcconfig */,
+				B8D8DBC67E7DAB37E2D5F6A4 /* Pods-coffeeReviewApp-tvOS.debug.xcconfig */,
+				AD4F0C03B7E2766AA27025B2 /* Pods-coffeeReviewApp-tvOS.release.xcconfig */,
+				7C029D42088220BB5B8C5E0D /* Pods-coffeeReviewApp-tvOSTests.debug.xcconfig */,
+				DB3B7EE76D2CBA8B3F8ABE1A /* Pods-coffeeReviewApp-tvOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
+				76C227452FCC1FFF476FD800 /* libPods-coffeeReviewApp.a */,
+				2C2F409AC13B7548E691C87F /* libPods-coffeeReviewApp-coffeeReviewAppTests.a */,
+				268E443AC21E0E448ED91C1E /* libPods-coffeeReviewApp-tvOS.a */,
+				309B1E96665C1B14DF4F1179 /* libPods-coffeeReviewApp-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +216,8 @@
 				00E356EF1AD99517003FC87E /* coffeeReviewAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				A84B20ADDB204848965E0016 /* Resources */,
+				1D4A2E9F08BC04E59D9B730B /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -157,6 +235,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A84B20ADDB204848965E0016 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA24901942B74A598CF68394 /* Roboto-Black.ttf */,
+				A35B01CB53534B539C53A245 /* Roboto-BlackItalic.ttf */,
+				8ADB84CF178D413D8C935531 /* Roboto-Bold.ttf */,
+				C723C83F1F4F46CAB0B56BE7 /* Roboto-BoldItalic.ttf */,
+				3A01C6CE8503414CB09342CE /* Roboto-Italic.ttf */,
+				D28362DDB29E4BB1AEB00E5F /* Roboto-Light.ttf */,
+				4058444E68C444598D1E34B5 /* Roboto-LightItalic.ttf */,
+				AB6F3EDC80AD4299B9DF832E /* Roboto-Medium.ttf */,
+				7CBBFA574D334AE389817ADD /* Roboto-MediumItalic.ttf */,
+				966A6E2093A148639660C923 /* Roboto-Regular.ttf */,
+				BCAE01B5C0E04D539623430C /* Roboto-Thin.ttf */,
+				7557B9C08A4344618A47261A /* Roboto-ThinItalic.ttf */,
+				75ABC4E03C2A4AEDBEC85969 /* RobotoCondensed-Bold.ttf */,
+				2EA6E96976D2437A81B80923 /* RobotoCondensed-BoldItalic.ttf */,
+				A1B975F547FD4CE9A4A59881 /* RobotoCondensed-Italic.ttf */,
+				26FB52359F924373A2570C8A /* RobotoCondensed-Light.ttf */,
+				C871BCE59D3E46D9877FB235 /* RobotoCondensed-LightItalic.ttf */,
+				D38FDBCF1D934F078B00DC73 /* RobotoCondensed-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,9 +268,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "coffeeReviewAppTests" */;
 			buildPhases = (
+				B719A6154EAC97CEFB62C3F7 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				3081B91DEABEB4A53EAB5DA4 /* [CP] Embed Pods Frameworks */,
+				84B2B30EA3EC0DA205BE0D78 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,11 +289,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "coffeeReviewApp" */;
 			buildPhases = (
+				8CB86BE4044E1251A0460D47 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				B3A3DA8132026FBA3FB60F59 /* [CP] Embed Pods Frameworks */,
+				21A2EAB24A8059A2569BFCBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +311,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "coffeeReviewApp-tvOS" */;
 			buildPhases = (
+				4995EBB7D83FE175A5EEFB4E /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -220,6 +331,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "coffeeReviewApp-tvOSTests" */;
 			buildPhases = (
+				C433E5AA8F35C84A9A34BFB1 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -295,6 +407,24 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				C3E0AE6C51434591B3BE075D /* Roboto-Black.ttf in Resources */,
+				039CA88853FC46C68BEE2E08 /* Roboto-BlackItalic.ttf in Resources */,
+				40C5724272C944B6B7C38C66 /* Roboto-Bold.ttf in Resources */,
+				4D654066F62F4313ACA672B7 /* Roboto-BoldItalic.ttf in Resources */,
+				B0A45B64C3F44428A5536A23 /* Roboto-Italic.ttf in Resources */,
+				A8F976AD3A314634A9A42800 /* Roboto-Light.ttf in Resources */,
+				6FED79CFA7464C31B562797E /* Roboto-LightItalic.ttf in Resources */,
+				49BF8281A8ED45DBA9421734 /* Roboto-Medium.ttf in Resources */,
+				3C200B7529DE47D19375C05B /* Roboto-MediumItalic.ttf in Resources */,
+				D2B3A3A751E24130BFC530CD /* Roboto-Regular.ttf in Resources */,
+				9C5DFFE9273149E9BDBE955C /* Roboto-Thin.ttf in Resources */,
+				2ECD3F8A55814EF3AF5B3B01 /* Roboto-ThinItalic.ttf in Resources */,
+				E6FE236602454729A13B5DC6 /* RobotoCondensed-Bold.ttf in Resources */,
+				6FD54AB930304AA4B6ADBDE7 /* RobotoCondensed-BoldItalic.ttf in Resources */,
+				6976372D67924E1995523579 /* RobotoCondensed-Italic.ttf in Resources */,
+				DD9E7BA694CF438B979AA766 /* RobotoCondensed-Light.ttf in Resources */,
+				50068FF8A57B4359A40C1AA2 /* RobotoCondensed-LightItalic.ttf in Resources */,
+				B98AAEFADF494EA596CDD6F2 /* RobotoCondensed-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +460,24 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		21A2EAB24A8059A2569BFCBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coffeeReviewApp/Pods-coffeeReviewApp-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coffeeReviewApp/Pods-coffeeReviewApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +491,148 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		3081B91DEABEB4A53EAB5DA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coffeeReviewApp-coffeeReviewAppTests/Pods-coffeeReviewApp-coffeeReviewAppTests-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coffeeReviewApp-coffeeReviewAppTests/Pods-coffeeReviewApp-coffeeReviewAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4995EBB7D83FE175A5EEFB4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-coffeeReviewApp-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84B2B30EA3EC0DA205BE0D78 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coffeeReviewApp-coffeeReviewAppTests/Pods-coffeeReviewApp-coffeeReviewAppTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coffeeReviewApp-coffeeReviewAppTests/Pods-coffeeReviewApp-coffeeReviewAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CB86BE4044E1251A0460D47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-coffeeReviewApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3A3DA8132026FBA3FB60F59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coffeeReviewApp/Pods-coffeeReviewApp-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coffeeReviewApp/Pods-coffeeReviewApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B719A6154EAC97CEFB62C3F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-coffeeReviewApp-coffeeReviewAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C433E5AA8F35C84A9A34BFB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-coffeeReviewApp-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -437,6 +727,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC1E799978603CDE145F78EA /* Pods-coffeeReviewApp-coffeeReviewAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -459,6 +750,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2515F191747722A99CC30523 /* Pods-coffeeReviewApp-coffeeReviewAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -478,6 +770,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 153006251DD5F1A913039E63 /* Pods-coffeeReviewApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -500,6 +793,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A779852B8305023FCAD202FE /* Pods-coffeeReviewApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -520,6 +814,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8D8DBC67E7DAB37E2D5F6A4 /* Pods-coffeeReviewApp-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -547,6 +842,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD4F0C03B7E2766AA27025B2 /* Pods-coffeeReviewApp-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -574,6 +870,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C029D42088220BB5B8C5E0D /* Pods-coffeeReviewApp-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -600,6 +897,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB3B7EE76D2CBA8B3F8ABE1A /* Pods-coffeeReviewApp-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
