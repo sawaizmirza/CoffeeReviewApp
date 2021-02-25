@@ -9,14 +9,24 @@ import {
   ScrollView,
   FlatList,
 } from 'react-native';
-import {COLORS, FONTS, icons, SIZES} from '../constants';
+import {COLORS, FONTS, icons, SERVER_URL, SIZES} from '../constants';
 
-const Home = ({navigation}) => {
+const Home = ({route, navigation}) => {
   const [shops, setShops] = useState([]);
+  const [userInfo, setUserInfo] = useState(null);
 
   useEffect(() => {
-    fetch('http://192.168.0.4:3333/api/1.0.0/find2')
-      .then((response) => response.json())
+    if (route.params && route.params.user) {
+      setUserInfo(route.params.user);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetch(`${SERVER_URL}/api/1.0.0/find2`)
+      .then((response) => {
+        if (response.ok) return response.json();
+        else throw response.text();
+      })
       .then((result) => setShops(result))
       .catch((error) => console.log('error', error));
   }, []);
@@ -27,8 +37,9 @@ const Home = ({navigation}) => {
         <TouchableOpacity
           style={{marginBottom: SIZES.padding * 2}}
           onPress={() =>
-            navigation.navigate('Restaurant', {
+            navigation.navigate('Reviews', {
               item,
+              userInfo,
             })
           }>
           <View
@@ -67,7 +78,9 @@ const Home = ({navigation}) => {
                   marginRight: 10,
                 }}
               />
-              <Text style={{...FONTS.h4}}>{item.avg_overall_rating}</Text>
+              <Text style={{...FONTS.h4}}>
+                {item.avg_overall_rating.toFixed(2)}
+              </Text>
             </View>
           </View>
           <View
@@ -97,7 +110,7 @@ const Home = ({navigation}) => {
     return (
       <FlatList
         data={shops}
-        keyExtractor={(shop) => shop.location_id}
+        keyExtractor={(shop) => shop.location_id.toString()}
         renderItem={renderItem}
         contentContainerStyle={{
           paddingHorizontal: SIZES.padding * 2,
@@ -107,9 +120,32 @@ const Home = ({navigation}) => {
     );
   }
 
+  const handleUserClick = () => {
+    navigation.navigate('Login');
+  };
+
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={{...FONTS.h1, margin: 20}}>Coffee Shops</Text>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}>
+        <Text style={{...FONTS.h1, margin: 20}}>Coffee Shops</Text>
+        <TouchableOpacity onPress={handleUserClick}>
+          <Image
+            style={{
+              height: 30,
+              width: 30,
+              tintColor: COLORS.darkgray,
+              margin: 20,
+            }}
+            source={icons.user}
+            resizeMode="contain"
+          />
+        </TouchableOpacity>
+      </View>
       {renderRestaurantList()}
     </SafeAreaView>
   );
