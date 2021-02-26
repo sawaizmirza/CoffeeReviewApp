@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import { useState } from 'react';
 import {
   ActivityIndicator,
   Dimensions,
@@ -10,9 +10,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {COLORS, FONTS, SERVER_URL} from '../constants';
+import { COLORS, FONTS, SERVER_URL } from '../constants';
 
-const Login = ({navigation}) => {
+const Login = ({ navigation }) => {
   const [mode, setMode] = useState('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -35,7 +35,7 @@ const Login = ({navigation}) => {
     setIsAuthenticating(true);
     var myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/json');
-    var raw = JSON.stringify({email: email, password: password});
+    var raw = JSON.stringify({ email: email, password: password });
     console.log(raw);
     var requestOptions = {
       method: 'POST',
@@ -55,7 +55,7 @@ const Login = ({navigation}) => {
         changeMode('login');
       })
       .catch((error) => {
-        alert('Error ' + error);
+        alert('Error ' + JSON.stringify(error));
         setIsAuthenticating(false);
       });
   };
@@ -90,7 +90,7 @@ const Login = ({navigation}) => {
       })
       .catch((error) => {
         setIsAuthenticating(false);
-        alert('Error ' + error);
+        alert('Error ' + JSON.stringify(error));
       });
   };
 
@@ -109,7 +109,7 @@ const Login = ({navigation}) => {
           height: Dimensions.get('window').height,
           justifyContent: 'flex-start',
         }}>
-        <Text style={{...FONTS.h2, margin: 50, textAlign: 'center'}}>
+        <Text style={{ ...FONTS.h2, margin: 50, textAlign: 'center' }}>
           LOGIN
         </Text>
 
@@ -133,24 +133,24 @@ const Login = ({navigation}) => {
               animating={isAuthenticating}
               size="large"
               color={COLORS.primary}
-              style={{marginTop: 20}}
+              style={{ marginTop: 20 }}
             />
           ) : (
-            <TouchableOpacity style={styles.button} onPress={handleLogin}>
-              <Text style={{color: 'white'}}>Login</Text>
-            </TouchableOpacity>
-          )}
+              <TouchableOpacity style={styles.button} onPress={handleLogin}>
+                <Text style={{ color: 'white' }}>Login</Text>
+              </TouchableOpacity>
+            )}
 
-          <Text style={{fontSize: 15, padding: 25, paddingBottom: 20}}>
+          <Text style={{ fontSize: 15, padding: 25, paddingBottom: 20 }}>
             ------------ OR ------------
           </Text>
           <TouchableOpacity
-            style={[styles.button, {backgroundColor: COLORS.lightGray}]}
+            style={[styles.button, { backgroundColor: COLORS.lightGray }]}
             onPress={() => changeMode('signup')}>
-            <Text style={{color: COLORS.black}}>Sign Up</Text>
+            <Text style={{ color: COLORS.black }}>Sign Up</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{marginTop: 30}} onPress={skipAuth}>
-            <Text style={{color: COLORS.primary}}> {'>> SKIP FOR NOW'}</Text>
+          <TouchableOpacity style={{ marginTop: 30 }} onPress={skipAuth}>
+            <Text style={{ color: COLORS.primary }}> {'>> SKIP FOR NOW'}</Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>
@@ -162,7 +162,7 @@ const Login = ({navigation}) => {
           height: Dimensions.get('window').height,
           justifyContent: 'flex-start',
         }}>
-        <Text style={{...FONTS.h2, margin: 50, textAlign: 'center'}}>
+        <Text style={{ ...FONTS.h2, margin: 50, textAlign: 'center' }}>
           SIGN UP
         </Text>
         <View style={styles.loginContainer}>
@@ -197,24 +197,24 @@ const Login = ({navigation}) => {
               animating={isAuthenticating}
               size="large"
               color={COLORS.primary}
-              style={{marginTop: 20}}
+              style={{ marginTop: 20 }}
             />
           ) : (
-            <TouchableOpacity style={styles.button} onPress={handleCreate}>
-              <Text style={{color: 'white'}}>Create Account</Text>
-            </TouchableOpacity>
-          )}
+              <TouchableOpacity style={styles.button} onPress={handleCreate}>
+                <Text style={{ color: 'white' }}>Create Account</Text>
+              </TouchableOpacity>
+            )}
 
-          <Text style={{fontSize: 15, padding: 25, paddingBottom: 20}}>
+          <Text style={{ fontSize: 15, padding: 25, paddingBottom: 20 }}>
             ------------ OR ------------
           </Text>
           <TouchableOpacity
-            style={[styles.button, {backgroundColor: COLORS.lightGray}]}
+            style={[styles.button, { backgroundColor: COLORS.lightGray }]}
             onPress={() => changeMode('login')}>
-            <Text style={{color: COLORS.black}}>Login</Text>
+            <Text style={{ color: COLORS.black }}>Login</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{marginTop: 30}} onPress={skipAuth}>
-            <Text style={{color: COLORS.primary}}> {'>> SKIP FOR NOW'}</Text>
+          <TouchableOpacity style={{ marginTop: 30 }} onPress={skipAuth}>
+            <Text style={{ color: COLORS.primary }}> {'>> SKIP FOR NOW'}</Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>

@@ -10,7 +10,9 @@ export const hotdog = require('../assets/icons/hotdog.png');
 export const like = require('../assets/icons/like.png');
 export const list = require('../assets/icons/list.png');
 export const location = require('../assets/icons/location.png');
-export const master_card = require('../assets/icons/mastercard.png');
+export const location2 = require('../assets/icons/location2.png');
+export const distance = require('../assets/icons/distance.png');
+export const close = require('../assets/icons/close.png');
 export const nearby = require('../assets/icons/nearby.png');
 export const noodle = require('../assets/icons/noodle.png');
 export const pin = require('../assets/icons/pin.png');
@@ -37,7 +39,8 @@ export default {
   like,
   list,
   location,
-  master_card,
+  location2,
+  close,
   nearby,
   noodle,
   pin,
@@ -50,4 +53,5 @@ export default {
   star,
   sushi,
   user,
+  distance,
 };

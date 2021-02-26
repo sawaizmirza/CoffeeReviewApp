@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -6,16 +6,19 @@ import {
   TouchableOpacity,
   View,
   Image,
-  ScrollView,
   FlatList,
   ActivityIndicator,
 } from 'react-native';
-import {COLORS, FONTS, icons, SERVER_URL, SIZES} from '../constants';
+import { COLORS, FONTS, icons, SERVER_URL, SIZES } from '../constants';
+import GetLocation from 'react-native-get-location';
+import { getDistance } from 'geolib';
 
-const Home = ({route, navigation}) => {
+const Home = ({ route, navigation }) => {
   const [shops, setShops] = useState([]);
   const [userInfo, setUserInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [nearByShops, setNearByShops] = useState([]);
+  const [isNearyBy, setIsNearBy] = useState(false);
 
   useEffect(() => {
     if (route.params && route.params.user) {
@@ -32,6 +35,43 @@ const Home = ({route, navigation}) => {
       .then((result) => {
         setShops(result);
         setIsLoading(false);
+
+        // Calculating the distances of from my location
+        GetLocation.getCurrentPosition({
+          enableHighAccuracy: true,
+          timeout: 15000,
+        })
+          .then((location) => {
+            console.log(location);
+
+            var nearByShops = [];
+            for (var i = 0; i < result.length; i++) {
+              var distance = getDistance(
+                { latitude: location.latitude, longitude: location.longitude },
+                {
+                  latitude: result[i].latitude,
+                  longitude: result[i].longitude,
+                },
+              );
+
+              var distanceInMiles = Math.round(distance * 0.000621371192);
+              console.log(
+                `Distance in Miles for ${result[i].location_id} is ${distanceInMiles}`,
+              );
+              if (distanceInMiles <= 4000) {
+                console.log('nearby');
+                nearByShops.push({
+                  ...result[i],
+                  distance: distanceInMiles,
+                });
+              }
+            }
+            setNearByShops(nearByShops);
+          })
+          .catch((error) => {
+            const { code, message } = error;
+            console.log(code, message);
+          });
       })
       .catch((error) => {
         alert('Error ' + error);
@@ -39,11 +79,19 @@ const Home = ({route, navigation}) => {
       });
   }, []);
 
+  const handleNearBySearch = () => {
+    setIsNearBy(!isNearyBy);
+    var nearby = nearByShops;
+    var normalShops = shops;
+    setNearByShops(normalShops);
+    setShops(nearby);
+  };
+
   function renderRestaurantList() {
-    const renderItem = ({item}) => {
+    const renderItem = ({ item }) => {
       return (
         <TouchableOpacity
-          style={{marginBottom: SIZES.padding * 2}}
+          style={{ marginBottom: SIZES.padding * 2 }}
           onPress={() =>
             navigation.navigate('Reviews', {
               item,
@@ -55,7 +103,7 @@ const Home = ({route, navigation}) => {
               marginBottom: SIZES.padding,
             }}>
             <Image
-              source={{uri: item.photo_path}}
+              source={{ uri: item.photo_path }}
               resizeMode="cover"
               style={{
                 width: '100%',
@@ -86,7 +134,7 @@ const Home = ({route, navigation}) => {
                   marginRight: 10,
                 }}
               />
-              <Text style={{...FONTS.h4}}>
+              <Text style={{ ...FONTS.h4 }}>
                 {item.avg_overall_rating.toFixed(1)}
               </Text>
             </View>
@@ -97,10 +145,10 @@ const Home = ({route, navigation}) => {
               alignItems: 'center',
               justifyContent: 'space-between',
             }}>
-            <Text style={{...FONTS.body2}}>{item.location_name}</Text>
-            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <Text style={{ ...FONTS.body2 }}>{item.location_name}</Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
               <Image
-                source={icons.location}
+                source={isNearyBy ? icons.distance : icons.location}
                 style={{
                   height: 20,
                   width: 20,
@@ -108,7 +156,9 @@ const Home = ({route, navigation}) => {
                   marginRight: 10,
                 }}
               />
-              <Text style={{...FONTS.body2}}>{item.location_town}</Text>
+              <Text style={{ ...FONTS.body2 }}>
+                {isNearyBy ? `${item.distance} Miles` : item.location_town}
+              </Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -130,27 +180,28 @@ const Home = ({route, navigation}) => {
 
   const handleUserClick = () => {
     if (userInfo) {
-      var myHeaders = new Headers();
-      myHeaders.append('X-Authorization', JSON.parse(userInfo).token);
+      navigation.navigate('User', { user: userInfo });
+      // var myHeaders = new Headers();
+      // myHeaders.append('X-Authorization', JSON.parse(userInfo).token);
 
-      var raw = '';
+      // var raw = '';
 
-      var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: raw,
-      };
+      // var requestOptions = {
+      //   method: 'POST',
+      //   headers: myHeaders,
+      //   body: raw,
+      // };
 
-      fetch(`${SERVER_URL}/api/1.0.0/user/logout`, requestOptions)
-        .then((response) => {
-          if (response.ok) return response.text();
-          else throw response.text();
-        })
-        .then((result) => {
-          alert('Log Out Successfull');
-          navigation.navigate('Login');
-        })
-        .catch((error) => alert('Error : ' + error));
+      // fetch(`${SERVER_URL}/api/1.0.0/user/logout`, requestOptions)
+      //   .then((response) => {
+      //     if (response.ok) return response.text();
+      //     else throw response.text();
+      //   })
+      //   .then((result) => {
+      //     alert('You are logged out');
+      //     navigation.navigate('Login');
+      //   })
+      //   .catch((error) => alert('Error : ' + error));
     } else {
       navigation.navigate('Login');
     }
@@ -164,7 +215,23 @@ const Home = ({route, navigation}) => {
           alignItems: 'center',
           justifyContent: 'space-between',
         }}>
-        <Text style={{...FONTS.h1, margin: 20}}>Coffee Shops</Text>
+        <Text style={{ ...FONTS.h1, margin: 20 }}>
+          {isNearyBy ? 'Nearby Coffee Shops' : 'Coffee Shops'}
+        </Text>
+
+        {/* {userInfo ? (
+          <TouchableOpacity onPress={handleUserClick}>
+            <Text
+              style={{
+                height: 30,
+                width: 80,
+                color: COLORS.black,
+                fontSize: 20,
+              }}>
+              Log Out
+            </Text>
+          </TouchableOpacity>
+        ) : ( */}
         <TouchableOpacity onPress={handleUserClick}>
           <Image
             style={{
@@ -177,6 +244,7 @@ const Home = ({route, navigation}) => {
             resizeMode="contain"
           />
         </TouchableOpacity>
+        {/* )} */}
       </View>
 
       {isLoading ? (
@@ -186,11 +254,36 @@ const Home = ({route, navigation}) => {
             size="large"
             color={COLORS.primary}
           />
-          <Text style={{margin: 20}}>Fetching the Coffee Shops</Text>
+          <Text style={{ margin: 20 }}>Fetching the Coffee Shops</Text>
+        </View>
+      ) : shops.length === 0 ? (
+        <View style={{ flex: 1, alignItems: 'center' }}>
+          <Text style={{ marginTop: 30, fontSize: SIZES.body2 }}>
+            {isNearyBy
+              ? 'No Nearby Coffee Shops found'
+              : 'No Coffee Shops found'}
+          </Text>
         </View>
       ) : (
-        renderRestaurantList()
-      )}
+            renderRestaurantList()
+          )}
+      <TouchableOpacity
+        onPress={handleNearBySearch}
+        style={{
+          borderWidth: 1,
+          borderColor: 'rgba(0,0,0,0.2)',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: 70,
+          position: 'absolute',
+          bottom: 40,
+          right: 20,
+          height: 70,
+          backgroundColor: '#fff',
+          borderRadius: 100,
+        }}>
+        <Image style={{ height: 50, width: 50 }} source={icons.location2} />
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };

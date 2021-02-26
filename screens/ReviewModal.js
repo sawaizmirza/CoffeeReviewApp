@@ -1,8 +1,9 @@
 import React from 'react';
-import {useState} from 'react';
+import { useState } from 'react';
 import {
   ActivityIndicator,
   Button,
+  Image,
   Modal,
   StyleSheet,
   Text,
@@ -10,8 +11,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {Rating, AirbnbRating} from 'react-native-ratings';
-import {COLORS, SERVER_URL} from '../constants';
+import { Rating, AirbnbRating } from 'react-native-ratings';
+import { COLORS, FONTS, icons, SERVER_URL } from '../constants';
 
 const ReviewModal = ({
   showModal,
@@ -58,7 +59,7 @@ const ReviewModal = ({
 
   const handleReviewSubmit = () => {
     if (isWarning) {
-      alert('Review cannot be submitted with warnings');
+      alert('Review cannot be submitted. Reviews on coffee only permitted');
       return;
     }
     if (
@@ -78,12 +79,14 @@ const ReviewModal = ({
     myHeaders.append('Content-Type', 'application/json');
 
     var raw = JSON.stringify({
-      overall_rating: over,
+      overall_rating: Math.round((price + quality + clean) / 3),
       price_rating: price,
       quality_rating: quality,
       clenliness_rating: clean,
       review_body: review,
     });
+
+    console.log(raw);
 
     var requestOptions = {
       method: 'POST',
@@ -116,7 +119,7 @@ const ReviewModal = ({
       })
       .catch((error) => {
         setIsSubmitting(false);
-        alert('Error ' + error);
+        alert('Error ' + JSON.stringify(error));
       });
   };
 
@@ -124,7 +127,28 @@ const ReviewModal = ({
     <Modal animationType="slide" transparent={true} visible={showModal}>
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
-          <Text>Add a Review</Text>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              width: 300,
+            }}>
+            <Text style={{ paddingLeft: 10, fontSize: 20 }}>Add a Review</Text>
+            <TouchableOpacity
+              onPress={() => {
+                if (isSubmitting) {
+                  return;
+                }
+                setShowModal(false);
+              }}>
+              <Image
+                source={icons.close}
+                resizeMode="contain"
+                style={{ width: 15, height: 15 }}
+              />
+            </TouchableOpacity>
+          </View>
           <TextInput
             multiline={true}
             numberOfLines={2}
@@ -140,7 +164,8 @@ const ReviewModal = ({
                 lowerCaseText.includes('pastries') ||
                 lowerCaseText.includes('pastry') ||
                 lowerCaseText.includes('cookie') ||
-                lowerCaseText.includes('cookies')
+                lowerCaseText.includes('cookies') ||
+                lowerCaseText.includes('shit')
               ) {
                 setIsWarning(true);
               } else {
@@ -162,7 +187,7 @@ const ReviewModal = ({
           ) : null}
 
           <View style={styles.rating}>
-            <Text style={{minWidth: 100}}>Cleanliness</Text>
+            <Text style={{ minWidth: 100 }}>Cleanliness</Text>
             <AirbnbRating
               fractions="{2}"
               defaultRating={clean}
@@ -173,7 +198,7 @@ const ReviewModal = ({
             />
           </View>
           <View style={styles.rating}>
-            <Text style={{minWidth: 100}}>Price</Text>
+            <Text style={{ minWidth: 100 }}>Price</Text>
             <AirbnbRating
               fractions="{1}"
               defaultRating={price}
@@ -182,7 +207,7 @@ const ReviewModal = ({
             />
           </View>
           <View style={styles.rating}>
-            <Text style={{minWidth: 100}}>Quality</Text>
+            <Text style={{ minWidth: 100 }}>Quality</Text>
             <AirbnbRating
               fractions="{1}"
               defaultRating={quality}
@@ -190,7 +215,7 @@ const ReviewModal = ({
               size={20}
             />
           </View>
-          <View style={styles.rating}>
+          {/* <View style={styles.rating}>
             <Text style={{minWidth: 100}}>Overall Rating</Text>
             <AirbnbRating
               fractions="{1}"
@@ -198,22 +223,22 @@ const ReviewModal = ({
               onFinishRating={(rating) => ratingCompleted(rating, 'overall')}
               size={20}
             />
-          </View>
+          </View> */}
 
           {isSubmitting ? (
             <ActivityIndicator
               animating={isSubmitting}
               size="large"
               color={COLORS.primary}
-              style={{marginTop: 20, width: 300}}
+              style={{ marginTop: 20, width: 300 }}
             />
           ) : (
-            <TouchableOpacity
-              style={styles.button}
-              onPress={handleReviewSubmit}>
-              <Text style={{color: 'white'}}>Submit</Text>
-            </TouchableOpacity>
-          )}
+              <TouchableOpacity
+                style={styles.button}
+                onPress={handleReviewSubmit}>
+                <Text style={{ color: 'white' }}>Submit</Text>
+              </TouchableOpacity>
+            )}
         </View>
       </View>
     </Modal>
