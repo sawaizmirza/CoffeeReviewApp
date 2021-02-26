@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import { useState } from 'react';
 import {
   Button,
   Modal,
@@ -9,8 +9,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {Rating, AirbnbRating} from 'react-native-ratings';
-import {COLORS, SERVER_URL} from '../constants';
+import { Rating, AirbnbRating } from 'react-native-ratings';
+import { COLORS, SERVER_URL } from '../constants';
 
 const ReviewModal = ({
   showModal,
@@ -119,7 +119,7 @@ const ReviewModal = ({
             }}
           />
           <View style={styles.rating}>
-            <Text style={{minWidth: 100}}>Cleanliness</Text>
+            <Text style={{ minWidth: 100 }}>Cleanliness</Text>
             <AirbnbRating
               fractions="{2}"
               defaultRating={clean}
@@ -130,7 +130,7 @@ const ReviewModal = ({
             />
           </View>
           <View style={styles.rating}>
-            <Text style={{minWidth: 100}}>Price</Text>
+            <Text style={{ minWidth: 100 }}>Price</Text>
             <AirbnbRating
               fractions="{1}"
               defaultRating={price}
@@ -139,7 +139,7 @@ const ReviewModal = ({
             />
           </View>
           <View style={styles.rating}>
-            <Text style={{minWidth: 100}}>Quality</Text>
+            <Text style={{ minWidth: 100 }}>Quality</Text>
             <AirbnbRating
               fractions="{1}"
               defaultRating={quality}
@@ -148,7 +148,7 @@ const ReviewModal = ({
             />
           </View>
           <View style={styles.rating}>
-            <Text style={{minWidth: 100}}>Overall Rating</Text>
+            <Text style={{ minWidth: 100 }}>Overall Rating</Text>
             <AirbnbRating
               fractions="{1}"
               defaultRating={over}
@@ -158,7 +158,7 @@ const ReviewModal = ({
           </View>
 
           <TouchableOpacity style={styles.button} onPress={handleReviewSubmit}>
-            <Text style={{color: 'white'}}>Submit</Text>
+            <Text style={{ color: 'white' }}>Submit</Text>
           </TouchableOpacity>
         </View>
       </View>
