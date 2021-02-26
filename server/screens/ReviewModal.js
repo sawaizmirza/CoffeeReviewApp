@@ -1,7 +1,6 @@
 import React from 'react';
-import { useState } from 'react';
+import {useState} from 'react';
 import {
-  ActivityIndicator,
   Button,
   Modal,
   StyleSheet,
@@ -10,8 +9,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { Rating, AirbnbRating } from 'react-native-ratings';
-import { COLORS, SERVER_URL } from '../constants';
+import {Rating, AirbnbRating} from 'react-native-ratings';
+import {COLORS, SERVER_URL} from '../constants';
 
 const ReviewModal = ({
   showModal,
@@ -26,7 +25,6 @@ const ReviewModal = ({
   const [quality, setQuality] = useState(0);
   const [over, setOver] = useState(0);
   const [review, setReview] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const ratingCompleted = (rating, type) => {
     if (type === 'cleanliness') {
@@ -66,7 +64,6 @@ const ReviewModal = ({
       return;
     }
     console.log('UserINFO : ' + userInfo);
-    setIsSubmitting(true);
     var myHeaders = new Headers();
     myHeaders.append('X-Authorization', userInfo.token);
     myHeaders.append('Content-Type', 'application/json');
@@ -94,26 +91,21 @@ const ReviewModal = ({
         else throw response.text();
       })
       .then((result) => {
-        // let newLocationReviews = [...item.location_reviews, JSON.parse(raw)];
-        // let newItem = {
-        //   ...item,
-        //   location_reviews: newLocationReviews,
-        // };
-        // console.log(newItem);
-        setIsSubmitting(false);
+        let newLocationReviews = [...item.location_reviews, JSON.parse(raw)];
+        let newItem = {
+          ...item,
+          location_reviews: newLocationReviews,
+        };
+        console.log(newItem);
+        // navigation.navigate('Reviews', {
+        //   item: newItem,
+        //   userInfo: JSON.stringify(userInfo),
+        // });
         reset();
         setShowModal(false);
-        alert(
-          `Your review for ${item.location_name} submitted successfully 😍`,
-        );
-        navigation.navigate('Home', {
-          user: userInfo,
-        });
+        updateLocationReviews(newLocationReviews);
       })
-      .catch((error) => {
-        setIsSubmitting(false);
-        alert('Error ' + error);
-      });
+      .catch((error) => console.log('error', error));
   };
 
   return (
@@ -135,7 +127,7 @@ const ReviewModal = ({
             }}
           />
           <View style={styles.rating}>
-            <Text style={{ minWidth: 100 }}>Cleanliness</Text>
+            <Text style={{minWidth: 100}}>Cleanliness</Text>
             <AirbnbRating
               fractions="{2}"
               defaultRating={clean}
@@ -146,7 +138,7 @@ const ReviewModal = ({
             />
           </View>
           <View style={styles.rating}>
-            <Text style={{ minWidth: 100 }}>Price</Text>
+            <Text style={{minWidth: 100}}>Price</Text>
             <AirbnbRating
               fractions="{1}"
               defaultRating={price}
@@ -155,7 +147,7 @@ const ReviewModal = ({
             />
           </View>
           <View style={styles.rating}>
-            <Text style={{ minWidth: 100 }}>Quality</Text>
+            <Text style={{minWidth: 100}}>Quality</Text>
             <AirbnbRating
               fractions="{1}"
               defaultRating={quality}
@@ -164,7 +156,7 @@ const ReviewModal = ({
             />
           </View>
           <View style={styles.rating}>
-            <Text style={{ minWidth: 100 }}>Overall Rating</Text>
+            <Text style={{minWidth: 100}}>Overall Rating</Text>
             <AirbnbRating
               fractions="{1}"
               defaultRating={over}
@@ -173,20 +165,9 @@ const ReviewModal = ({
             />
           </View>
 
-          {isSubmitting ? (
-            <ActivityIndicator
-              animating={isSubmitting}
-              size="large"
-              color={COLORS.primary}
-              style={{ marginTop: 20, width: 300 }}
-            />
-          ) : (
-              <TouchableOpacity
-                style={styles.button}
-                onPress={handleReviewSubmit}>
-                <Text style={{ color: 'white' }}>Submit</Text>
-              </TouchableOpacity>
-            )}
+          <TouchableOpacity style={styles.button} onPress={handleReviewSubmit}>
+            <Text style={{color: 'white'}}>Submit</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </Modal>

@@ -28,75 +28,62 @@ const Reviews = ({route, navigation}) => {
   useEffect(() => {
     if (route.params) {
       if (route.params.item) {
+        setItem(route.params.item);
         if (route.params.userInfo) {
           var userData = JSON.parse(route.params.userInfo);
+          var reqHeader = new Headers();
+          reqHeader.append('X-Authorization', userData.token);
 
-          fetch(`${SERVER_URL}/api/1.0.0/find2`)
-            .then((response) => {
-              if (response.ok) return response.json();
-              else throw response.text();
-            })
-            .then((result) => {
-              console.log('Location ID : ' + route.params.item.location_id);
-              var coffeeList = result;
-              var newLocation;
-              for (var i = 0; i < coffeeList.length; i++) {
-                console.log(
-                  `LST: ${coffeeList[i].location_id} ROUTE: ${route.params.item.location_id}`,
-                );
-                if (
-                  coffeeList[i].location_id === route.params.item.location_id
-                ) {
-                  newLocation = coffeeList[i];
-                  break;
+          var requestOptions = {
+            method: 'GET',
+            headers: reqHeader,
+          };
+
+          fetch(
+            `${SERVER_URL}/api/1.0.0/location/${route.params.item.location_id}`,
+            requestOptions,
+          )
+            .then((response) => response.text())
+            .then((result) => console.log('Location Reviews: ' + result))
+            .catch((error) => console.log('error', error));
+          var locationReviews = route.params.item.location_reviews;
+          var userIds = locationReviews.map((review) => {
+            return review.review_user_id;
+          });
+          var reviewUsersData = new Array(Math.max(...userIds)).fill('');
+          console.log('Reviews user data ' + reviewUsersData);
+          userIds.map((user, index) => {
+            var myHeaders = new Headers();
+            myHeaders.append('X-Authorization', userData.token);
+
+            var requestOptions = {
+              method: 'GET',
+              headers: myHeaders,
+            };
+
+            fetch(`${SERVER_URL}/api/1.0.0/user/${user}`, requestOptions)
+              .then((response) => {
+                if (response.ok) return response.json();
+                else throw response.text();
+              })
+              .then((result) => {
+                reviewUsersData[
+                  user
+                ] = `${result.first_name} ${result.last_name}`;
+                if (index === userIds.length - 1) {
+                  setReviewUserData(reviewUsersData);
+                  console.log('Setting user data : ' + reviewUsersData);
+                  setShowLoading(false);
                 }
-              }
-              setItem(newLocation);
-              var locationReviews = newLocation.location_reviews;
-              setLocationReviews(locationReviews);
-              var userIds = locationReviews.map((review) => {
-                return review.review_user_id;
+              })
+              .catch((error) => {
+                setShowLoading(false);
               });
-              var reviewUsersData = new Array(Math.max(...userIds)).fill('');
-              console.log('Reviews user data ' + reviewUsersData);
-              userIds.map((user, index) => {
-                var myHeaders = new Headers();
-                myHeaders.append('X-Authorization', userData.token);
-
-                var requestOptions = {
-                  method: 'GET',
-                  headers: myHeaders,
-                };
-
-                fetch(`${SERVER_URL}/api/1.0.0/user/${user}`, requestOptions)
-                  .then((response) => {
-                    if (response.ok) return response.json();
-                    else throw response.text();
-                  })
-                  .then((result) => {
-                    reviewUsersData[
-                      user
-                    ] = `${result.first_name} ${result.last_name}`;
-                    if (index === userIds.length - 1) {
-                      setReviewUserData(reviewUsersData);
-                      console.log('Setting user data : ' + reviewUsersData);
-                      setShowLoading(false);
-                    }
-                  })
-                  .catch((error) => {
-                    setShowLoading(false);
-                  });
-              });
-            })
-            .catch((error) => {
-              alert('Error ' + JSON.stringify(error));
-              setShowLoading(false);
-            });
+          });
         } else {
-          setItem(route.params.item);
-          setLocationReviews(route.params.item.location_reviews);
           setShowLoading(false);
         }
+        setLocationReviews(route.params.item.location_reviews);
       }
       if (route.params.userInfo) {
         setUserInfo(JSON.parse(route.params.userInfo));
@@ -262,7 +249,6 @@ const Reviews = ({route, navigation}) => {
           paddingHorizontal: SIZES.padding * 2,
           paddingBottom: 30,
         }}
-        inverted={true}
       />
     );
   }
