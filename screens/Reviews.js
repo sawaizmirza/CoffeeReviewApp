@@ -262,7 +262,6 @@ const Reviews = ({route, navigation}) => {
           paddingHorizontal: SIZES.padding * 2,
           paddingBottom: 30,
         }}
-        inverted={true}
       />
     );
   }
